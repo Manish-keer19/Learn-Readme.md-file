@@ -9,8 +9,7 @@ This document covers the styling properties available in React Native and includ
 3. [Border Properties](#border-properties)
 4. [Typography Properties](#typography-properties)
 5. [Image Styling Properties](#image-styling-properties)
-6. [Flexbox Properties](#flexbox-properties)
-7. [Example Usage](#example-usage)
+6. [Example Usage](#example-usage)
 
 ## Layout Properties
 
@@ -131,6 +130,7 @@ export default function App() {
       <Text style={styles.title}>Hello, World!</Text>
       <Image source={{ uri: 'https://example.com/image.jpg' }} style={styles.image} />
       <Text style={styles.text}>This is an example text.</Text>
+      <View style={styles.box} />
     </View>
   );
 }
@@ -141,6 +141,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
+    backgroundColor: '#f5f5f5',
   },
   title: {
     fontSize: 24,
@@ -164,5 +165,14 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.8,
     shadowRadius: 3,
+  },
+  box: {
+    width: 100,
+    height: 100,
+    backgroundColor: 'blue',
+    borderRadius: 10,
+    marginTop: 20,
+    borderColor: 'black',
+    borderWidth: 2,
   },
 });
